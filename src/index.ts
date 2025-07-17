@@ -1,23 +1,20 @@
 class Person{
-    email:string
-    name:string
-    //city: string; // Error: Property 'city' has no initializer
+    public email:string // accessible out side of the class also
+    private name:string   
+    //if we dont want it to be accessible to anyone
     readonly city: string = "delhi"; // Initialized
+    //defaultly it is reffered as public in Typescript
 
     constructor(email:string,name:string){
         this.email=email;
         this.name=name;
+        this.city;//its accessible here ,only with in the class
         
     }
 }
 const krish=new Person('k@v.com','krishna');
 
-console.log(krish.city); // ''
-//hitesh.city = "Jaipur";   // Set new value   //if we not give readonly, we can set new values
+//console.log(krish.city); // ''
+//krish.city;
 
 
-//by using classes
-//✅ Structure
-//✅ Type Safety
-//✅ Readability
-//✅ Mistake Prevention

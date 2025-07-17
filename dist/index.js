@@ -1,17 +1,14 @@
 "use strict";
 class Person {
+    //defaultly it is reffered as public in Typescript
     constructor(email, name) {
-        //city: string; // Error: Property 'city' has no initializer
+        //if we dont want it to be accessible to anyone
         this.city = "delhi"; // Initialized
         this.email = email;
         this.name = name;
+        this.city; //its accessible here ,only with in the class
     }
 }
 const krish = new Person('k@v.com', 'krishna');
-console.log(krish.city); // ''
-//hitesh.city = "Jaipur";   // Set new value   //if we not give readonly, we can set new values
-//by using classes
-//✅ Structure
-//✅ Type Safety
-//✅ Readability
-//✅ Mistake Prevention
+//console.log(krish.city); // ''
+//krish.city;
