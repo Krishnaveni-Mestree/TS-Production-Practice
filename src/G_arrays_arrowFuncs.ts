@@ -29,5 +29,34 @@ function logLength<T,>(input: T[]): void {    // , is for should not confuse our
   console.log(input.length); // ✅ Valid because it's an array
 }
 
+//------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//special cases in generics
+function anotherFunction<T,U extends number>(valOne:T,valTwo:U):object{
+    return{
+        valOne,
+        valTwo
+    }
+}
+//anotherFunction(3,'4') //string not assignable to number
+
+
+//
+interface Database{
+    connection:string,
+    username:string,
+    password:string
+}
+
+function anotherFunction1<T,U extends Database>(valOne:T,valTwo:U):object{
+    return{
+        valOne,
+        valTwo
+    }
+}
+//anotherFunction1(3,{})
+
+
 
 export {}

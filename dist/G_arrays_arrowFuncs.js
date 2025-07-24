@@ -23,3 +23,17 @@ function getSearch(prods) {
 function logLength(input) {
     console.log(input.length); // ✅ Valid because it's an array
 }
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//special cases in generics
+function anotherFunction(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo
+    };
+}
+function anotherFunction1(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo
+    };
+}
